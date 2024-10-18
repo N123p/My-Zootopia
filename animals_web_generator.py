@@ -67,8 +67,21 @@ def generate_html(animals_data, template_path, output_path):
     print(f"HTML file '{output_path}' has been created successfully.")
 
 
+def main():
+    try:
+        # Load animal data
+        animals_data = load_data('animals_data.json')
 
-animals_data = load_data('animals_data.json')
+        # Generate HTML file
+        generate_html(animals_data, 'animals_template.html', 'animals.html')
+
+    except FileNotFoundError as fnf_error:
+        print(f"Error: {fnf_error}")
+    except json.JSONDecodeError as json_error:
+        print(f"Error decoding JSON: {json_error}")
+    except Exception as e:
+        print(f"An unexpected error occurred: {e}")
 
 
-generate_html(animals_data, 'animals_template.html', 'animals.html')
+if __name__ == "__main__":
+    main()
