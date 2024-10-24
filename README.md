@@ -1,5 +1,5 @@
 ## Zootopia 
-* This project is a Python-based web application that fetches information about animals from the API Ninjas and dynamically generates an HTML page with the data. Users can search for animals by name, and the system will either display relevant details or inform the user if the animal is not found in the database.
+* This project is a Python-based web application that fetches information about animals from the API Ninjas and  generates an HTML page with the data. Users can search for animals by name, and the system will either display relevant details or inform the user if the animal is not found in the database.
 
 
 
